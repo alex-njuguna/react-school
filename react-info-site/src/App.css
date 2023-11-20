@@ -1,0 +1,54 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aliceblue;
+  box-shadow: 0 0 5px;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.nav-items{
+  display: flex;
+  list-style: none;
+}
+
+.nav-items > li{
+  padding: 12px;
+}
+
+.nav-logo{
+  width: 100px;
+}
+
+.main-content{
+  margin: 5px;
+  font-family: sans-serif;
+  border:burlywood;
+  padding: 5px;
+}
+
+.main-content > h1{
+  font-weight: lighter;
+}
+
+.main-content > ol{
+  list-style: none;
+}
+
+.main-content > ol > li{
+  margin: 10px 0;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.page-footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(46, 44, 44);
+  color: whitesmoke;
+  padding: 10px;
+  font-size: 16px;
+}
