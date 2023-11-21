@@ -1,8 +1,13 @@
 .nav{
     display: flex;
-    justify-content: space-between;
+    font-family: Inter, sans-serif;
     padding: 30px;
-    background-color: rgb(20, 20, 20);
+    background-color: #21222A;
+}
+
+.nav-logo{
+    display: flex;
+    margin-right: auto;
 }
 
 .nav > h4{
@@ -10,11 +15,9 @@
     font-size: large;
 }
 
-.nav-logo{
-    display: flex;
-}
 
 .nav-logo > h2{
     color: rgb(97, 219, 251);
+    font-size: 22px;
 }
 

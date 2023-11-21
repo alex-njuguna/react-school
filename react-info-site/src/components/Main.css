@@ -1,9 +1,27 @@
 .body-contents{
-    margin: 40px;
+    padding: 57px 27px;
     color: whitesmoke;
+    background-image: url("./logo192.png");
+    background-position: right 50%;
+    background-repeat: no-repeat;
+}
+
+.main--title{
+    margin: 0;
+    letter-spacing: -0.05em;
+    font-size: 39px;
+}
+
+.body-contents > ul{
+    max-width: 400px;
 }
 
 .body-contents > ul > li{
     padding: 10px;
     margin: 5px 0;
+}
+
+.body-contents > ul > li::marker{
+    font-size: 1.6rem;
+    color: rgb(97, 219, 251);
 }

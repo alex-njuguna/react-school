@@ -12,7 +12,7 @@ export default function Navbar(){
         </div>
             
 
-            <h4>ReactCourse-Project 1</h4>
+            <h4>ReactCourse - Project 1</h4>
        </div>
     )
 }
