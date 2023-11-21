@@ -1,0 +1,83 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    font-family: Inter, sans-serif;
+    background: #272626;
+    height: 745px;
+    width: 393px;
+    margin: auto;
+}
+
+.header-image{
+    width: 393px;
+    height: 364px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.bs-top{
+    text-align: center;
+}
+
+.bs-top > h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 9px 2px 0px 0px;
+}
+
+.bs-top > h5{
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.button-list{
+    text-align: center;
+}
+
+.button-list > button{
+    width: 124px;
+    height: 31px;
+    border-radius: 10px;
+    margin: 7px;
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.button-list .email-btn{
+    background: #d9d9d9;
+}
+
+.button-list .linkedin-btn{
+    color: #FFF;
+    background: #5388ba;
+}
+
+.main-content{
+    margin-left: 66px;
+    margin-right: 65px;
+}
+
+.main-content > h2{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.footer-content{
+    margin-bottom: 12px;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.footer-content > img{
+    width: 29px;
+    height: 29px;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+
