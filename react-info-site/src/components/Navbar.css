@@ -1,0 +1,20 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: rgb(20, 20, 20);
+}
+
+.nav > h4{
+    color: whitesmoke;
+    font-size: large;
+}
+
+.nav-logo{
+    display: flex;
+}
+
+.nav-logo > h2{
+    color: rgb(97, 219, 251);
+}
+

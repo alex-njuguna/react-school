@@ -1,0 +1,9 @@
+.body-contents{
+    margin: 40px;
+    color: whitesmoke;
+}
+
+.body-contents > ul > li{
+    padding: 10px;
+    margin: 5px 0;
+}

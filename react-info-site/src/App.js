@@ -1,20 +1,16 @@
-import React from "react";
-import Main from "./components/Main"
+import './App.css';
+
 import Navbar from "./components/Navbar"
+import Main from './components/Main';
 
 
-function App(){
-    return (
-        <div>
-            <Navbar />
-            <Main />
-        </div>
-    )
+function App() {
+  return (
+    <div  className='app'>
+      <Navbar />
+      <Main />
+    </div>
+  );
 }
 
-
-export default App
-
-
-
-
+export default App;
