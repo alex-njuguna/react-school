@@ -1,0 +1,36 @@
+.App{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  padding: 5px;
+  width: 550px;
+}
+
+.nav-logo{
+  padding: 5px;
+}
+
+.nav-logo > hr{
+  color: azure;
+}
+
+.experiences{
+  width: 500px;
+  padding: 5px;
+}
+
+.experiences > img{
+  width: 480px;
+  align-self: center;
+}
+
+.experiences > p{
+  font-size: 20px;
+}
+
+.experiences > h1, p {
+  width: 400px;
+}
