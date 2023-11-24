@@ -2,23 +2,27 @@ import "./Card.css"
 
 export default function Card(props){
     return (
-        <div className="card m-2 text-dark">
-            <div className="card-header h-50">
-                <img className="w-100" src={props.image} alt="" />
-            </div>
-            <div className="card-body">
-                <h5>{props.name}</h5>
-            </div>
-            <div className="card-footer fs-8">
-                <p>
-                    <i className="fa-solid fa-phone"></i> 
-                    &nbsp;{props.phone}
-                </p>
-                <p>
-                    <i class="fa-solid fa-envelope"></i>
-                    <small>{props.email}</small> 
-                </p>
+        <div className="col-md-2">
+            <div className="card m-2 text-dark">
+                <div className="card-header">
+                    <img src={props.image} width="150px" alt="" />
+                </div>
+                <div className="card-body">
+                    <p className="mb-3">
+                        <img src={props.star} alt="" width="25px"/>
+                        {props.rating}
+                        ({props.reviewCount})&nbsp;
+                        
+                          - {props.country}
+                    </p>
+                    
+                    <p className="w-100">{props.title}</p>
+                </div>
+                <div className="card-footer fs-8">
+                     <p><strong>from ${props.price}</strong> / person</p>
+                </div>
             </div>
         </div>
+        
     )
 }
