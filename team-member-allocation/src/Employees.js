@@ -5,6 +5,9 @@ import maleProfile from "./images/maleProfile.jpg"
 
 
 const Employees = () => {
+
+    const [selectedTeam, setTeam] = useState("TeamB")
+
     const [employees, setEmployees] = useState(
         [
             {
@@ -94,12 +97,34 @@ const Employees = () => {
         ]
     )
 
+    function handleTeamSelection(event){
+        console.log(event.target.value)
+        setTeam(event.target.value)
+    }
+
+    function handleEmployeeCardClick(event) {
+        const transformedEmployees = employees.map((employee) => {
+            if (employee.id === parseInt(event.currentTarget.id)) {
+                if (employee.teamName === selectedTeam) {
+                    return { ...employee, teamName: "" };
+                } else {
+                    return { ...employee, teamName: selectedTeam };
+                }
+            } else {
+                return employee;
+            }
+        });
+
+        setEmployees(transformedEmployees);
+    }
+
+
     return (
         <main>
             <div className="container mt-5 mb-3 justify-content-center">
 
                 <div className="row w-75 m-auto">
-                    <select className="form-select form-select-lg">
+                    <select value={selectedTeam} onChange={handleTeamSelection} className="form-select form-select-lg">
                         <option value="TeamA">Team A</option>
                         <option value="TeamB">Team B</option>
                         <option value="TeamC">Team C</option>
@@ -110,18 +135,18 @@ const Employees = () => {
                 <div className="row mt-4">
                     {employees.map((employee) => (
                     <div className="col-md-2">
-                        <div className="card m-2 text-center rounded">
-                            <div className="card-img-top">
+                        <div id={employee.id} className={(employee.teamName === selectedTeam ? "card m-2 text-center bg-secondary text-light" : "card m-2 text-center")} onClick={handleEmployeeCardClick}>
+                            <div className="card-img-top mt-2" style={{ cursor: "pointer" }}>
                                 {(employee.gender === "female") ? <img src={femaleProfile} alt="female avatar"/> 
                                 : <img src={maleProfile} alt="male avatar"/>
                                 }
                             </div>
                             <div className="card-body">
                                 <div className="card-title">
-                                    {employee.fullName}
+                                    <strong>Full Name:</strong> {employee.fullName}
                                 </div>
                                 <div className="card-text">
-                                    {employee.designation}
+                                    <strong>Designation: </strong>{employee.designation}
                                 </div>
                             </div>
                         </div>
