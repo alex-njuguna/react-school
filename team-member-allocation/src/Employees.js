@@ -134,8 +134,8 @@ const Employees = () => {
 
                 <div className="row mt-4">
                     {employees.map((employee) => (
-                    <div className="col-md-2">
-                        <div id={employee.id} className={(employee.teamName === selectedTeam ? "card m-2 text-center bg-secondary text-light" : "card m-2 text-center")} onClick={handleEmployeeCardClick}>
+                    <div className="col-md-3">
+                        <div id={employee.id} className={(employee.teamName === selectedTeam ? "card m-2 text-center bg-secondary text-light shadow" : "card m-2 text-center shadow")} onClick={handleEmployeeCardClick}>
                             <div className="card-img-top mt-2" style={{ cursor: "pointer" }}>
                                 {(employee.gender === "female") ? <img src={femaleProfile} alt="female avatar"/> 
                                 : <img src={maleProfile} alt="male avatar"/>
