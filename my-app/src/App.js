@@ -1,32 +1,29 @@
-const App = () => {
-  const peopleInfo = [
-    {
-      username: 'Alex',
-      country: 'Kenya',
-      email: 'alex@mail.com'
-    },
-    {
-      username: 'mike',
-      country: 'South Africa',
-      email: 'mike@mail.com'
-    },
-    {
-      username: 'Edday',
-      country: 'Egypt',
-      email: 'edday@mail.com'
-    }
-  ]
-
+const User = (props) => {
   return (
     <>
-    {peopleInfo.map((person) => (
-      <ul key={Math.random() * 100}>
-        <li>{person.username}</li>
-        <li>{person.country}</li>
-        <li>{person.email}</li>
-      </ul>
-    ))}
+      <img src={props.image}></img>
+      <h1>{props.name}</h1>
+      <h3>{props.age}</h3>
+      <h3>Hobbies: </h3>
+      {props.hobbies.map((hobby) => (
+        <ul key={Math.random() * 10}>
+          <li>{hobby}</li>
+        </ul>
+      ))}
     </>
+  )
+}
+
+const App = () => {
+  return (
+  <>
+    <User 
+      image = "https://avatars.githubusercontent.com/u/123743552?v=4"
+      name = 'Alex Njuguna'
+      age = {28}
+      hobbies = {['coding', 'movies', 'reading', 'music']}
+    />
+  </>
   )
 }
 
