@@ -1,11 +1,11 @@
-const User = (props) => {
+const User = ({image, name, age, hobbies}) => {
   return (
     <>
-      <img src={props.image}></img>
-      <h1>{props.name}</h1>
-      <h3>{props.age}</h3>
+      <img src={image}/>
+      <h1>{name}</h1>
+      <h3>{age}</h3>
       <h3>Hobbies: </h3>
-      {props.hobbies.map((hobby) => (
+      {hobbies.map((hobby) => (
         <ul key={Math.random() * 10}>
           <li>{hobby}</li>
         </ul>
