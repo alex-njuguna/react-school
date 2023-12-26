@@ -1,7 +1,7 @@
-const User = ({image, name, age, hobbies}) => {
+const User = ({image, name, age, hobbies, children}) => {
   return (
     <>
-      <img src={image}/>
+      <img src={image} alt={name}/>
       <h1>{name}</h1>
       <h3>{age}</h3>
       <h3>Hobbies: </h3>
@@ -10,6 +10,7 @@ const User = ({image, name, age, hobbies}) => {
           <li>{hobby}</li>
         </ul>
       ))}
+      {children}
     </>
   )
 }
@@ -22,7 +23,9 @@ const App = () => {
       name = 'Alex Njuguna'
       age = {28}
       hobbies = {['coding', 'movies', 'reading', 'music']}
-    />
+      >
+        <p>Hello, I am children!!</p>
+      </User>
   </>
   )
 }
