@@ -1,16 +1,25 @@
-const User = ({image, name, age, hobbies, children}) => {
+const Cart = () => {
+  const cart_items = ['headphones', 'hoodie', 'server', 'fan']
+
   return (
     <>
-      <img src={image} alt={name}/>
-      <h1>{name}</h1>
-      <h3>{age}</h3>
-      <h3>Hobbies: </h3>
-      {hobbies.map((hobby) => (
-        <ul key={Math.random() * 10}>
-          <li>{hobby}</li>
-        </ul>
-      ))}
-      {children}
+      <h1>Cart</h1>
+      {
+        (cart_items.length > 0) ? <h2>You have {cart_items.length} in your cart</h2> : <h2></h2>
+        // cart_items.length > 0 && <h2>You have {cart_items.length} in your cart</h2>
+
+      }
+      <ul>
+      <h4>Products</h4>
+      {
+        cart_items.map((item) => (
+          <li key={Math.random() * 10}>
+            {item}
+          </li>
+        ))
+      }
+      </ul>
+      
     </>
   )
 }
@@ -18,14 +27,7 @@ const User = ({image, name, age, hobbies, children}) => {
 const App = () => {
   return (
   <>
-    <User 
-      image = "https://avatars.githubusercontent.com/u/123743552?v=4"
-      name = 'Alex Njuguna'
-      age = {28}
-      hobbies = {['coding', 'movies', 'reading', 'music']}
-      >
-        <p>Hello, I am children!!</p>
-      </User>
+    <Cart/>
   </>
   )
 }
