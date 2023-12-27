@@ -23,9 +23,35 @@ const Counter = () => {
 }
 
 const App = () => {
+
+  const [friends, setFriends] = useState(['James', 'Peter'])
+
+  const addOne = () => {
+    setFriends([...friends, 'Paul'])
+  }
+
+  const removeOne = () => {
+    setFriends(friends.filter((friend) => friend !== 'Peter'))
+  }
+
+  const updateOne = () => {
+    setFriends(friends.map((friend) => (
+      (friend === 'James') ? friend = 'James Monroe' : friend
+    )))
+  }
+
   return (
   <>
-    <Counter/>
+    {
+      friends.map((friend) => (
+        <li key={Math.random() * 10}>{friend}</li>
+      ))
+    }
+
+      <button onClick={addOne}>Add one</button>
+      <button onClick={removeOne}>Remove one</button>
+      <button onClick={updateOne}>Update one</button>
+
   </>
   )
 }
