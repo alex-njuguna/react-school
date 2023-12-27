@@ -1,33 +1,31 @@
-const Cart = () => {
-  const cart_items = ['headphones', 'hoodie', 'server', 'fan']
+import { useState } from "react"
+
+const Counter = () => {
+  const [count, setCount] = useState(0)
+
+  const increment = () => {
+    setCount(count + 1)
+  }
+
+  const decrement = () => {
+    setCount(count - 1)
+  }
 
   return (
-    <>
-      <h1>Cart</h1>
-      {
-        (cart_items.length > 0) ? <h2>You have {cart_items.length} in your cart</h2> : <h2></h2>
-        // cart_items.length > 0 && <h2>You have {cart_items.length} in your cart</h2>
+    <div>
+      <h1>{count}</h1>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
 
-      }
-      <ul>
-      <h4>Products</h4>
-      {
-        cart_items.map((item) => (
-          <li key={Math.random() * 10}>
-            {item}
-          </li>
-        ))
-      }
-      </ul>
-      
-    </>
+    </div>
+   
   )
 }
 
 const App = () => {
   return (
   <>
-    <Cart/>
+    <Counter/>
   </>
   )
 }
