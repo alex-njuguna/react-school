@@ -1,11 +1,22 @@
 // a function that pushes our elemts to the dom
 const customRender = (what, where) => {
+    // const domElement = document.createElement(what.type)
+    // domElement.textContent = what.children
+    // domElement.setAttribute('href', what.props.href)
+    // domElement.setAttribute('target', what.props.target)
+
+    // where.appendChild(domElement)
+
+    // optimized code
     const domElement = document.createElement(what.type)
     domElement.textContent = what.children
-    domElement.setAttribute('href', what.props.href)
-    domElement.setAttribute('target', what.props.target)
 
-    where.appendChild(domElement)
+    for (const prop in what.props) {
+        if (prop === 'children') continue
+        domElement.setAttribute(prop, what.props[prop])
+    }
+
+    where.append(domElement)
 }
 
 // build a custom react element
