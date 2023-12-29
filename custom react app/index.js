@@ -5,7 +5,7 @@ const customRender = (what, where) => {
     domElement.setAttribute('href', what.props.href)
     domElement.setAttribute('target', what.props.target)
 
-    where.append(domElement)
+    where.appendChild(domElement)
 }
 
 // build a custom react element
