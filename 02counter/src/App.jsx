@@ -4,11 +4,12 @@ import './App.css'
 
 function App() {
 
-let counter = 0
+// let counter = 0
+const [counter, setCounter] = useState(0)
 
 const addValue = () => {
-  counter += 1
-  console.log(counter)
+  setCounter(counter + 1)
+  // console.log(counter)
 }
 
   return (
