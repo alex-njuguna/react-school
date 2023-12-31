@@ -2,13 +2,19 @@ import { useState } from 'react'
 
 function App() {
 
+  const [color, setColor] = useState('olive')
+
+  const changeColor = (color) => {
+    setColor(color)
+  }
+
   return (
-    <div className="container-fluid d-flex flex-column min-vh-100">
+    <div className="container-fluid d-flex flex-column min-vh-100" style={{backgroundColor: color}}>
       <div className="container-md text-center fixed-bottom">
         <div className="btn-group p-3">
-          <button className='btn btn-lg btn-outline-primary rounded m-3'>test</button>
-          <button className='btn btn-lg btn-outline-success rounded m-3'>test</button>
-          <button className='btn btn-lg btn-outline-danger rounded m-3'>test</button>
+          <button onClick={() => changeColor('#007BFF')} className='btn btn-lg btn-primary rounded m-3'>Primary</button>
+          <button onClick={() => changeColor('#28A745')} className='btn btn-lg btn-success rounded m-3'>Success</button>
+          <button onClick={() => changeColor('#DC3545')} className='btn btn-lg btn-danger rounded m-3'>Danger</button>
         </div>
         
       </div>
