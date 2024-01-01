@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 function App() {
 
@@ -26,6 +26,10 @@ function App() {
     }
 
     setPassword(pass)
+  }, [length, charAllowed, numberAllowed])
+
+  useEffect(() => {
+    generatePassword()
   }, [length, charAllowed, numberAllowed])
 
   return (
