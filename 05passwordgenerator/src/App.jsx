@@ -35,62 +35,64 @@ function App() {
   }, [length, charAllowed, numberAllowed])
 
 
-  const copyPasswordToClipBoard = () => {
+  const copyPasswordToClipboard = () => {
     window.navigator.clipboard.writeText(password)
     passwordRef.current?.select()
 
   }
 
   return (
-    <div className="container d-flex flex-column min-vh-100 align-items-center text-center p-4">
-        <h4 className="fw-bold text-light">Password Generator</h4>
-        <div className='fw-bold' style={{color: 'olive'}}>
-        <div className="container m-3">
-          <input 
-          className='rounded border-0 w-75 p-2'
-          type="text" 
-          value={password}
-          placeholder='Password'
-          readOnly
-          ref={passwordRef}
-          />
-          &nbsp;&nbsp;
-          <button onClick={copyPasswordToClipBoard} className='btn  btn-primary rounded'>copy</button>
-        </div>
-        
-        <div className="container m-3">
-          <input 
-          type="range"
-          min={6}
-          max={20}
-          value={length} 
-          onChange={(e) => setLength(e.target.value)}
-          name="" 
-          id="" 
-          />&nbsp;&nbsp;
-          <label htmlFor="length">Length: {length}</label>
-          &nbsp;&nbsp;&nbsp;&nbsp;
+      <div className="container d-flex flex-column min-vh-100 align-items-center text-center p-4">
+          <h4 className="fw-bold text-light">Password Generator</h4>
+          <div className="fw-bold" style={{ color: 'orange' }}>
+            <div className="container m-3">
+              <div className="row">
+                <div className="col-md-4 mb-4">
+                  <input
+                    className="rounded border-0 w-75 p-2"
+                    type="text"
+                    value={password}
+                    placeholder="Password"
+                    readOnly
+                    ref={passwordRef}
+                  />
+                  &nbsp;&nbsp;
+                  <button onClick={copyPasswordToClipboard} className="btn btn-primary rounded">
+                    Copy
+                  </button>
+                </div>
+                <div className="col-md-8">
+                  <input
+                    type="range"
+                    min={6}
+                    max={20}
+                    value={length}
+                    onChange={(e) => setLength(e.target.value)}
+                  />
+                  &nbsp;&nbsp;
+                  <label htmlFor="length">Length: {length}</label>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <input
+                    type="checkbox"
+                    defaultChecked={numberAllowed}
+                    onChange={() => setNumberAllowed((prev) => !prev)}
+                  />
+                  &nbsp;
+                  <label htmlFor="numbers">Numbers</label>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <input
+                    type="checkbox"
+                    defaultChecked={charAllowed}
+                    onChange={() => setCharAllowed((prev) => !prev)}
+                  />
+                  &nbsp;
+                  <label htmlFor="Character">Char</label>
+                </div>
+              </div>
+            </div>
+          </div>
+   </div>
 
-          <input
-          type='checkbox'
-          defaultChecked={numberAllowed}
-          onChange={() => {setNumberAllowed((prev) => !prev)}}
-          />&nbsp;
-          <label htmlFor="numbers">Numbers</label>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-
-          <input
-          type='checkbox'
-          defaultChecked={charAllowed}
-          onChange={() => {setCharAllowed((prev) => !prev)}}
-          />&nbsp;
-          <label htmlFor="Character">Char</label>
-        </div>
-
-        </div>
-        
-      
-    </div>
   )
 }
 
