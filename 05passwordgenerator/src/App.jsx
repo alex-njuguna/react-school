@@ -42,8 +42,9 @@ function App() {
   }
 
   return (
-    <div className="container d-flex flex-column min-vh-100 align-items-center text-center text-light p-4">
-        <h4 className="fw-bold">Password Generator</h4>
+    <div className="container d-flex flex-column min-vh-100 align-items-center text-center p-4">
+        <h4 className="fw-bold text-light">Password Generator</h4>
+        <div className='fw-bold' style={{color: 'olive'}}>
         <div className="container m-3">
           <input 
           className='rounded border-0 w-75 p-2'
@@ -86,6 +87,8 @@ function App() {
           <label htmlFor="Character">Char</label>
         </div>
 
+        </div>
+        
       
     </div>
   )
