@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import InputBox from './components/InputBox'
+import {InputBox} from './components/index'
 import UseCurrencyInfo from './hooks/UseCurrencyInfo'
 
 function App() {
@@ -27,7 +27,30 @@ function App() {
 
   return (
    <div className="container d-flex flex-column min-vh-100">
-      <InputBox />
+    <div className="w-100">
+      <div className="w-100 border-secondary rounded p-3 shadow bg-light">
+        <form onSubmit={(e) => {
+          e.preventDefault()
+          convert()
+        }}>
+          <div className="w-100 mb-1">
+            <InputBox 
+            label='from'
+            amount={amount}
+            currencyOptions={options}
+            onCurrencyChange={(currency) => setFrom(currency)}
+            onAmountChange={(amount) => setAmount(amount)}
+            selectedCurrency={from}
+            />
+          </div>
+          <div className="w-100">
+            <button className='btn btn-primary'>
+              Swap
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
    </div>
   )
 }
