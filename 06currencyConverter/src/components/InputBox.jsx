@@ -1,3 +1,5 @@
+import { useId } from "react";
+
 const InputBox = ({
   label,
   amount,
@@ -10,12 +12,14 @@ const InputBox = ({
   className = ''
 }) => {
 
+  const id = useId()
+
 return (
   <div className={`container bg-light p-3 rounded ${className}`}>
       <div className="w-50">
-          <label htmlFor="amountInput" className="text-dark mb-2">{label}</label>
+          <label htmlFor={id} className="text-dark mb-2">{label}</label>
           <input
-            id="amountInput"
+            id={id}
             type="number"
             className="w-100 border-0"
             placeholder="0"
@@ -29,7 +33,7 @@ return (
           Currency Type
         </p>
         <select
-          id="currencySelect"
+          id={id}
           className="rounded bg-secondary cursor-pointer border-0" 
           value={selectedCurrency}
           onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
