@@ -43,11 +43,31 @@ function App() {
             selectedCurrency={from}
             />
           </div>
+
           <div className="w-100">
-            <button className='btn btn-primary'>
+            <button 
+            className='btn btn-primary'
+            onClick={swap}
+            >
               Swap
             </button>
           </div>
+
+          <div className="w-100 mb-1">
+            <InputBox 
+            label='to'
+            amount={convertedAmount}
+            currencyOptions={options}
+            onCurrencyChange={(currency) => setTo(currency)}
+            selectedCurrency={to}
+            amountDisabled
+            />
+          </div>
+          <button 
+          className='btn btn-danger' 
+          type="submit">
+            Convert {from.toUpperCase()} to {to.toUpperCase()}
+          </button>
         </form>
       </div>
     </div>
