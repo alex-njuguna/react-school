@@ -1,4 +1,3 @@
-import React from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
 
@@ -6,32 +5,32 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary p-3 shadow m-auto">
         <div className="container-fluid">
-        <a className="navbar-brand fw-bolder fs-4 " href="#">
+        <Link className="navbar-brand fw-bolder fs-4 " to='/'>
           <span className='text-dark'>your</span>
           <span className='text-danger'>logo</span>
-        </a>
+        </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto fs-5">
                 <li className="nav-item">
-                <a className="nav-link active text-danger" aria-current="page" href="#">Home</a>
+                <Link className="nav-link active text-danger" aria-current="page" to="#">Home</Link>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="#">About</a>
+                <Link className="nav-link" to="#">About</Link>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="#">Contact</a>
+                <Link className="nav-link" to="#">Contact</Link>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="#">Github</a>
+                <Link className="nav-link" to="#">Github</Link>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="#">Log in</a>
+                <Link className="nav-link" to="#">Log in</Link>
                 </li>
                 <li className="nav-item">
-                <a className="btn btn-danger" href="#">Get started</a>
+                <Link className="btn btn-danger" to="#">Get started</Link>
                 </li>
             </ul>
             </div>
