@@ -1,0 +1,14 @@
+.navbar {
+    width: 100%;
+}
+
+.nav-item {
+    margin: 10px;
+    font-weight: 500;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        width: 90%;
+    }
+}

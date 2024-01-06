@@ -1,10 +1,16 @@
-// import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Header } from './components/index'
 
 function App() {
 
   return (
     <>
-      <h1 className='alert alert-success'>react router dom</h1>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          {/* <Route path='/' element=/> */}
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
