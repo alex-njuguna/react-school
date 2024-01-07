@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './Github.css';
 
 const Github = () => {
   const [data, setData] = useState({});
@@ -34,7 +35,7 @@ const Github = () => {
                 href={data.blog}
                 target='_blank'
                 rel="noopener noreferrer"
-                className='btn btn-warning text-danger'
+                className='btn btn-danger fw-bold fs-6 border-0 text-light'
               >
                 Visit Blog
               </a>
