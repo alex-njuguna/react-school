@@ -1,0 +1,8 @@
+.social {
+    margin: 8px;
+}
+
+.social:hover {
+    cursor: pointer;
+    transform: scale(2.0);
+}
