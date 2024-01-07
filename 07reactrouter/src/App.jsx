@@ -14,6 +14,7 @@ function App() {
           <Route path='github/' element={ <Github /> }/>
           <Route path='login/' element={ <Login /> }/>
           <Route path='get-started/' element={ <GetStarted /> }/>
+          <Route path='*' element={<div className='container p-3 fs-2 fw-bold text-danger'>Not Found</div>} />
         </Routes>
         <Footer />
       </BrowserRouter>
