@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <div className="container-fluid shadow p-2">
+    <div className="container-fluid shadow p-2 fixed-bottom">
       <div className="row">
         <div className="col-md-6 p-5">
           {/* Logo Section */}
