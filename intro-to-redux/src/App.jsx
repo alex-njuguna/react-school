@@ -7,4 +7,7 @@ const trim = (str) => str.trim()
 const wrapInDiv = (str) => `<div>${str}</div>`
 const toLowerCase = (str) => str.toLowerCase()
 
-const result = wrapInDiv(toLowerCase(trim(input)))
+// const result = wrapInDiv(toLowerCase(trim(input)))
+
+// passing function in referece using compose
+const transform = compose(wrapInDiv, toLowerCase, trim)
