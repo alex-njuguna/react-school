@@ -11,3 +11,14 @@ const toLowerCase = (str) => str.toLowerCase()
 
 // passing function in referece using compose
 const transform = compose(wrapInDiv, toLowerCase, trim)
+transform(input)
+
+// passing function in referece using pipe
+const transform2 = pipe(trim, toLowerCase, wrapInDiv)
+transform2(input)
+
+
+/*
+Pipe unlike compose allows for referencing functions by the order which they will operate from left to right.
+Compose the order is right to left 
+*/
