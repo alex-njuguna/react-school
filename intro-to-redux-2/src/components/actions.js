@@ -8,3 +8,12 @@ export function addBug(decription) {
         }
     }
 }
+
+export function removeBug(id) {
+    return {
+        type: actions.BUG_REMOVED,
+        payload: {
+            id: id
+     }
+    }
+}
