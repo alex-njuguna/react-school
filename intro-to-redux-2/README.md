@@ -33,6 +33,12 @@ step 2: Defining the actions
     }
 
     - Mark a bug as resolved
+    {
+        type: 'bugResolved',
+        payload: {
+            resolved: true
+        }
+    }
 
 step 3: Create a reducer
 
