@@ -1,5 +1,6 @@
 import './App.css'
 import { reducer, store } from './components/index'
+import * as actions from './components/actionTypes'
 
 
 /**
@@ -15,7 +16,7 @@ function App() {
   })
 
   store.dispatch ({
-    type: 'bugAdded', 
+    type: actions.BUG_ADDED, 
     payload: {
       description: 'bug 1'
     }
@@ -24,7 +25,7 @@ function App() {
   unsubscribe()
 
   store.dispatch({
-    type: 'bugRemoved',
+    type: actions.BUG_REMOVED,
     payload: {
       id: 1
     }
