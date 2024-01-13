@@ -1,7 +1,6 @@
 import './App.css'
 import { reducer, store } from './components/index'
-import * as actions from './components/actionTypes'
-
+import { addBug } from './components/actions'
 
 /**
  * logging store shows the various functionalities to operate the store
@@ -15,12 +14,7 @@ function App() {
     console.log('store changed', store.getState())
   })
 
-  store.dispatch ({
-    type: actions.BUG_ADDED, 
-    payload: {
-      description: 'bug 1'
-    }
-  })
+  store.dispatch(addBug('bug 1'))
 
   unsubscribe()
 
