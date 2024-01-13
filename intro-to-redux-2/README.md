@@ -1,8 +1,39 @@
-# React + Vite
+A bug tracker application to demostrate redux
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+step 1: design the application
 
-Currently, two official plugins are available:
+    {
+        bug: [
+            {
+                id: 1,
+                description: "",
+                resolved: false
+            }
+        ],
+        currentUser: {}
+    }
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+step 2: Defining the actions
+
+    - Add a bug
+    {
+        type: "bugAdded",
+        payload: {
+            description: "..."
+        }
+    }
+
+    - Delete a bug
+    {
+        type: "bugRemoved,
+        payload: {
+            id: 1
+        }
+    }
+
+    - Mark a bug as resolved
+
+step 3: Create a reducer
+
+step 4: Set up the store
