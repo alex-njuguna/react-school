@@ -1,3 +1,5 @@
+import * as actions from './actionTypes'
+
 /*
 *reducer function to update state 
 */
