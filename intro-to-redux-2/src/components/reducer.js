@@ -29,7 +29,7 @@ let lastId = 0
 
 
 // implementing the above with switch statement
-export default function reducer2(state = [], action) {
+export default function reducer(state = [], action) {
     switch (action.type) {
         case 'bugAdded':
             return [
