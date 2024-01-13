@@ -10,6 +10,14 @@ function App() {
     }
   })
 
+  store.dispatch({
+    type: 'bugRemoved',
+    payload: {
+      id: 1
+    }
+  })
+
+
   console.log(store.getState())
 
   return (
