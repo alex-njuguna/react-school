@@ -17,3 +17,12 @@ export function removeBug(id) {
      }
     }
 }
+
+export function resolveBug(id) {
+    return {
+        type: actions.BUG_RESOLVED,
+        payload: {
+            id: id
+        }
+    }
+}
