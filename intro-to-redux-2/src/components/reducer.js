@@ -27,7 +27,7 @@ function reducer(state = [], action) {
 
 
 // implementing the above with switch statement
-function reducer2(state, action) {
+function reducer2(state = [], action) {
     switch (action.type) {
         case 'bugAdded':
             return [
@@ -37,7 +37,7 @@ function reducer2(state, action) {
                     resolved: false
                 }
             ]
-            
+
         case 'bugRemoved':
             return state.filter((bug) => bug.id !== action.payload.id)
 
