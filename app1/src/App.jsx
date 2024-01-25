@@ -24,8 +24,17 @@ function List(props) {
   );
 }
 
+import Todo from "./Todo";
+
 function App() {
-  const animals = ["lion", "leopard", "rhino", "bufallo", "cheetah"];
+  const animals = [
+    "lion",
+    "leopard",
+    "rhino",
+    "bufallo",
+    "cheetah",
+    "stallion",
+  ];
 
   const names = ["Jackline", "Edday", "Michael", "Alfred", "lydia"];
 
@@ -35,6 +44,7 @@ function App() {
       <List items={animals} />
       <h1>People</h1>
       <List items={names} />
+      <Todo />
     </div>
   );
 }
