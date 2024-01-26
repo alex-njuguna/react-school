@@ -1,9 +1,12 @@
 import Button from "./Button";
 
 export default function App() {
+  const handleButtonClick = () => {
+    window.open("https://alex-njuguna.github.io", "_blank");
+  };
   return (
     <>
-      <Button
+      {/* <Button
         text={"Click me!"}
         backgroundColor={"blue"}
         textColor={"white"}
@@ -20,9 +23,9 @@ export default function App() {
         backgroundColor={"yellow"}
         textColor={"white"}
         fontSize={20}
-      />
+      /> */}
 
-      <Button />
+      <Button handleClick={handleButtonClick} />
     </>
   );
 }
