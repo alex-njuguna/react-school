@@ -1,7 +1,7 @@
 import { getImageUrl } from "./utils";
 import "./App.css";
 
-function Avatar({ person, size }) {
+function Avatar({ person, size = 100 }) {
   return (
     <img
       className="avatar"
@@ -37,7 +37,7 @@ export default function App() {
           name: "Lin Lanying",
           imageId: "1bX5QH6",
         }}
-        size={50}
+        // size={50}
       />
     </>
   );
