@@ -1,52 +1,11 @@
-function ListItem(props) {
-  return <li>{props.item.toUpperCase()}</li>;
-}
+import Button from "./Button";
 
-function List(props) {
-  if (!props.items) {
-    return <div>Loading...</div>;
-  }
-
-  if (props.items.length === 0) {
-    return <div>No items to display at the moment!</div>;
-  }
-
+export default function App() {
   return (
     <>
-      <ul>
-        {props.items.map(
-          (item) =>
-            // conditional rendering
-            item.includes("l") && <ListItem key={item} item={item} />
-        )}
-      </ul>
+      <Button text={"click me"} />
+      <Button text={"fuck off"} />
+      <Button text={"wanna play?"} />
     </>
   );
 }
-
-import Todo from "./Todo";
-
-function App() {
-  const animals = [
-    "lion",
-    "leopard",
-    "rhino",
-    "bufallo",
-    "cheetah",
-    "stallion",
-  ];
-
-  const names = ["Jackline", "Edday", "Michael", "Alfred", "lydia"];
-
-  return (
-    <div>
-      <h1>Animals</h1>
-      <List items={animals} />
-      <h1>People</h1>
-      <List items={names} />
-      <Todo />
-    </div>
-  );
-}
-
-export default App;
