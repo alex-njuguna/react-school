@@ -21,6 +21,8 @@ export default function App() {
         textColor={"white"}
         fontSize={20}
       />
+
+      <Button />
     </>
   );
 }
