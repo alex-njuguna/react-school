@@ -45,6 +45,10 @@ export default function App() {
         }}
         // size={50}
       />
+
+      <Card>
+        <h1 style={{ color: "black", fontSize: "1rem" }}>Hello World</h1>
+      </Card>
     </>
   );
 }
