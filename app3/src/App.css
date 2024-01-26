@@ -1,4 +1,15 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(167, 163, 163);
+  width: 9rem;
+  height: 9rem;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
 .avatar {
-  margin: 10px;
+  /* margin: auto; */
   border-radius: 50%;
 }

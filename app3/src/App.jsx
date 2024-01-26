@@ -13,16 +13,22 @@ function Avatar({ person, size = 100 }) {
   );
 }
 
+function Card({ children }) {
+  return <div className="card">{children}</div>;
+}
+
 export default function App() {
   return (
     <>
-      <Avatar
-        person={{
-          name: "Katsuko saruhashi",
-          imageId: "YfeOqp2",
-        }}
-        size={100}
-      />
+      <Card>
+        <Avatar
+          person={{
+            name: "Katsuko saruhashi",
+            imageId: "YfeOqp2",
+          }}
+          size={100}
+        />
+      </Card>
 
       <Avatar
         person={{
