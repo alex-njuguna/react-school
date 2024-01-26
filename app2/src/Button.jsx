@@ -10,8 +10,10 @@ export default function Button({
     color: textColor,
     fontSize: fontSize + "px",
   };
+  const url = "https://alex-njuguna.github.io";
+
   return (
-    <button style={buttonStyle} onClick={handleClick}>
+    <button style={buttonStyle} onClick={() => handleClick(url)}>
       {text}
     </button>
   );
