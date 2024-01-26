@@ -1,8 +1,8 @@
-export default function Button(props) {
+export default function Button({ backgroundColor, textColor, fontSize, text }) {
   const buttonStyle = {
-    backgroundColor: props.backgroundColor,
-    color: props.textColor,
-    fontSize: props.fontSize + "px",
+    backgroundColor: backgroundColor,
+    color: textColor,
+    fontSize: fontSize + "px",
   };
-  return <button style={buttonStyle}>{props.text}</button>;
+  return <button style={buttonStyle}>{text}</button>;
 }
