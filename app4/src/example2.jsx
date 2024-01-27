@@ -3,6 +3,7 @@ import { sculptureList } from "./data";
 
 export default function Gallery() {
   const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
 
   function handleClickNext() {
     setIndex(index + 1);
@@ -10,6 +11,10 @@ export default function Gallery() {
 
   function handleClickPrev() {
     if (index !== 0) setIndex(index - 1);
+  }
+
+  function handleShowMore() {
+    setShowMore(!showMore);
   }
 
   let sculpture = sculptureList[index];
@@ -26,7 +31,8 @@ export default function Gallery() {
         {index + 1} of {sculptureList.length}
       </h3>
       <img src={sculpture.url} alt={sculpture.alt} />
-      <p>{sculpture.description}</p>
+      <button onClick={handleShowMore}>show more</button>
+      {showMore && <p>{sculpture.description}</p>}
     </>
   );
 }
