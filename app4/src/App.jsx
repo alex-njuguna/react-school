@@ -1,4 +1,4 @@
-import Gallery from "./example1";
+import Gallery from "./example2";
 
 export default function App() {
   return (
