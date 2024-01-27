@@ -4,15 +4,20 @@ import { sculptureList } from "./data";
 export default function Gallery() {
   const [index, setIndex] = useState(0);
 
-  function handleClick() {
+  function handleClickNext() {
     setIndex(index + 1);
+  }
+
+  function handleClickPrev() {
+    if (index !== 0) setIndex(index - 1);
   }
 
   let sculpture = sculptureList[index];
 
   return (
     <>
-      <button onClick={handleClick}>Next</button>
+      <button onClick={handleClickNext}>Next</button>
+      <button onClick={handleClickPrev}>Prev</button>
       <h2>
         <i>{sculpture.name} </i>
         by {sculpture.artist}
