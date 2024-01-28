@@ -1,0 +1,29 @@
+fieldset {
+    border: 1px solid aliceblue 0.5;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.8);
+    background-color: gray;
+}
+
+.field {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.field label {
+    margin-right: 1rem;
+    font-size: large;
+}
+
+.field input {
+    padding: 0.4rem 0.6rem;
+    width: 16rem;
+    border: none;
+    font-size: large;
+    border-radius: 10px;
+    background: pink;
+    color: black;
+}
