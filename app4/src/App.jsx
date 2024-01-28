@@ -1,9 +1,9 @@
-import Gallery from "./exercise1";
+import Form from "./exercise2";
 
 export default function App() {
   return (
     <>
-      <Gallery />
+      <Form />
     </>
   );
 }
