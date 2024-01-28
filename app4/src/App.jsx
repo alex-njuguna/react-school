@@ -1,9 +1,9 @@
-import FeedbackForm from "./exercise3";
+import BackgroundChanger from "./exercise4";
 
 export default function App() {
   return (
     <>
-      <FeedbackForm />
+      <BackgroundChanger />
     </>
   );
 }
