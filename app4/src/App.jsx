@@ -1,9 +1,9 @@
-import Form from "./exercise2";
+import FeedbackForm from "./exercise3";
 
 export default function App() {
   return (
     <>
-      <Form />
+      <FeedbackForm />
     </>
   );
 }
