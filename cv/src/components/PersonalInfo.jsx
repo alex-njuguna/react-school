@@ -8,7 +8,6 @@ export default function PersonalInfo() {
 
   return (
     <>
-      <h2>Personal Information</h2>
       <div>
         <fieldset>
           <div className="field">
