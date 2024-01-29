@@ -39,7 +39,7 @@ export default function Education() {
               type="date"
               name="date"
               id="date"
-              value={date}
+              value={dateOfStudy}
               placeholder="University of Nairobi"
               onChange={(e) => setDateOfStudy(e.target.value)}
             />
